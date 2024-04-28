@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+* {
+  font-family: Poppins;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+.container {
+}
+
+.dashboard-title {
+}
+.dashboard-content {
+  margin-left: 132px;
+  margin-top: 35px;
+  /* margin-right: 10px; */
+}
+.upper-section {
+  display: flex;
+  /* width: 100%; */
+    justify-content: space-between;
+  /*column-gap: 167px;*/
+}
+.upper-section .left {
+  background: #1a3051;
+  color: #dae0ea;
+  border: 1px solid;
+  text-align: center;
+  border-radius: 10px;
+  /* margin-right: 146px; */
+}
+.left .application-bank {
+  margin: 30px 10px;
+  padding: 10px 0;
+}
+.left .applications {
+  display: block;
+  padding: 22px 10px;
+  margin: 10px;
+}
+.application-bank button {
+  border-radius: 20px;
+  height: 40px;
+  /*width: 180px;*/
+  color: #1a3051;
+  font-weight: 800;
+    background-color: #D7D8E6;
+}
+.applications img {
+  width: 25px;
+}
+.review-applications img {
+  width: 25px;
+}
+.upper-section .right {
+  background: #1a3051;
+  color: #dae0ea;
+  border: 1px solid;
+  text-align: center;
+  border-radius: 10px;
+  /* margin-left: 135px; */
+}
+.right .review-applications {
+  margin: 10px 0;
+  padding: 22px 10px;
+}
+.right .application-amount {
+  margin: 30px 10px;
+  padding: 10px 0;
+}
+.application-amount h2 {
+  font-weight: 800;
+}
+
+.lower-section {
+  background: #1a3051;
+  border-radius: 10px;
+  margin-top: 40px;
+  color: #dae0ea;
+  text-align: center;
+  display: block;
+}
+.counter {
+  padding: 40px 10px;
+  display: block;
+}
+.counter img {
+  width: 35px;
+}
+.live-counter {
+  padding: 30px 10px;
+}
+.live-counter h2 {
+  font-weight: 800;
+}
+
+@media only screen and (max-width: 600px) {
+  .dashboard-content {
+    margin-left: 0%;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .upper-section {
+    column-gap: 130px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
+  .upper-section {
+    column-gap: 95px;
+  }
+}

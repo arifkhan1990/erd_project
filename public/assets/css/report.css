@@ -1,0 +1,15 @@
+body {
+    font-family: "Roboto Slab", serif;
+}
+.img-size {
+    height: 500px;
+    width: 150px;
+}
+.sec2-bg {
+    background-color: white;
+}
+
+.signature {
+    display: flex;
+    justify-content: right;
+}

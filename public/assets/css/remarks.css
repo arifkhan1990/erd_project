@@ -1,0 +1,46 @@
+.bg-color {
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    /* line-height: 30px; */
+    /* letter-spacing: 0em; */
+    text-align: left;
+}
+.form-sizing {
+    width: 1135px;
+    height: 100%;
+    left: 392px;
+    top: 147px;
+
+    background-color: rgb(255, 255, 255);
+}
+.btn1-color {
+    background-color: #4e4e4e;
+    border: 1px solid #4e4e4e;
+}
+.button {
+    padding: 0 20px 0 20px;
+    border-radius: 20px 20px 20px 20px;
+}
+.btn2-color {
+    background-color: #538200;
+    border: 2px solid #538200;
+}
+.btn3-color {
+    background-color: #ce3636;
+    border: 2px solid #ce3636;
+}
+
+.back-to-report {
+    display: flex;
+    justify-content: right;
+}
+
+/* media query */
+/* @media only screen and (max-width: 600px) {
+  .back-to-report {
+    display: flex;
+    justify-content: left;
+  }
+} */

@@ -1,0 +1,75 @@
+/* ------------------- navbar css --------------------- */
+
+.navbar-brand {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-link {
+    font-size: 16px;
+}
+
+.nav-item {
+    padding-left: 30px;
+}
+
+ul.navbar-nav {
+    padding-right: 50px;
+}
+
+.nav-btn-language {
+    border-radius: 50px;
+    box-sizing: border-box;
+}
+
+.nav-btn-language {
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.first-section {
+    background-color: #e8eeef;
+}
+
+.nav_en_btn {
+    display: none;
+}
+
+
+/* ------------------- navbar css --------------------- */
+
+
+.text-font {
+  font-family: "Poppins", sans-serif;
+  color: #3a3a3a;
+}
+.text-align {
+  text-align: justify;
+}
+.sizing {
+  margin: 0px 280px 0px 280px;
+}
+.footer-bg {
+  background-color: #1a3051;
+  width: 100%;
+  bottom: 0;
+}
+.faq-font {
+  font-family: "Outfit", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+.faq-heading {
+  font-family: "Outfit", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+.faq-text {
+  color: #1a3051;
+}
+
+/* media query */
+@media (max-width: 750px) {
+  .sizing {
+    margin: 0px 25px 0px 25px;
+  }
+}

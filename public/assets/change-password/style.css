@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+* {
+  font-family: Poppins;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+.container {
+}
+#password {
+  background: #e5e5e5;
+  height: 600px;
+}
+
+.setting-title {
+  margin: 10px;
+  padding: 10px;
+}
+.setting-title h4 {
+  font-weight: 800;
+}
+.setting-content {
+  background: white;
+  margin-left: 25%;
+  width: 47%;
+  padding: 25px;
+  border-radius: 10px;
+}
+.setting-content h4 {
+  font-weight: 800;
+}
+.password-form {
+  padding: 80px 0;
+}
+.password-form form {
+}
+
+.password-form form label {
+  width: 160px;
+  font-weight: 800;
+}
+.password-form form input {
+  margin: 2px;
+}
+.changePass-btn {
+  text-align: center;
+  margin: 10px;
+}
+.changePass-btn button {
+  background: #609513;
+  color: #ffffff;
+  font-weight: 800;
+  border-radius: 25px;
+}
+
+/* ----------------------------- password validation ------------------------------------*/
+
+.password-validation-text{
+    color: red;
+    margin-bottom: 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* ----------------------------------------------------------- end - password validation */
+
+
+@media only screen and (max-width: 600px) {
+  .setting-content {
+    margin-left: 0%;
+    width: auto;
+    margin: 10px;
+  }
+}

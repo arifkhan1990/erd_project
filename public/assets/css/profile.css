@@ -1,0 +1,106 @@
+.profile-div{
+    padding: 10px;
+}
+
+.profile-image{
+    width: 100px;
+    display: block;
+    margin: auto;
+}
+
+.profile-form-div{
+    background-color: white;
+    padding: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.info-display{
+    display: flex;
+    margin-top: 10px;
+}
+
+.info-text{
+    margin-top: 5px;
+    margin-left: 8px;
+}
+
+.info-div{
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    margin-top: 20px;
+    margin-left: 100px;
+}
+
+.info-text-label{
+    color: #9F9F9F;
+    font-size: 14px;
+}
+
+.icon-img{
+    width: 60px;
+}
+
+.edit-profile{
+    margin-left: 80px;
+    margin-top: 20px;
+    border: none;
+    background: #1A3051;
+    border-radius: 50px;
+    font-size: 14px;
+    padding: 5px 10px;
+    color: white;
+}
+
+/* --------------------------------------------- media screen for tab ( portrait ) ------------------------------------------- */
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
+
+}
+
+/* ------------------------------------------------------------------------------------ end - media screen for tab ( portrait )  */
+
+/* ------------------------------------------ media screen for tab (landscape) ------------------------------------------------- */
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
+    /* For landscape layouts only */
+
+
+}
+
+/* -------------------------------------------------------------------------------------- end - media screen for tab (landscape) */
+
+/* --------------------------------------------- media screen for tab (pro) portrait ------------------------------------------- */
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+
+}
+
+/* ---------------------------------------------------------------------------------- end - media screen for tab (pro) portrait */
+
+/* ---------------------------------------------- media screen for tab ( pro ) landscape --------------------------------------- */
+
+@media only screen and (min-device-width: 1366px) and (min-device-height: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+
+}
+
+/* ------------------------------------------------------------------------------- end - media screen for tab ( pro ) landscape  */
+
+/* ------------------------------------------------------- media screen for mobile devices ------------------------------------- */
+@media only screen and (max-width: 600px) {
+    .info-div{
+        margin-left: 0px;
+    }
+
+}
+
+/* --------------------------------------------------------------------------------------  end - media screen for mobile devices */
+
+/* ---------------------------------------- media screen for 1366 x 768 desktop screens ---------------------------------------- */
+
+@media only screen and (device-width: 1366px) and (device-height: 768px) {
+
+}
+
+/* --------------------------------------------------------------------------- end - media screen for 1366 x 768 desktop screens */

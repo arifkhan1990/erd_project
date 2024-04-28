@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yesteryear&display=swap");
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 30px;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 12%;
+    left: 10%;
+    text-align: left;
+}
+
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+.top-left-ministry {
+    position: absolute;
+    top: 80px;
+    left: 100px;
+}
+
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+.top-right-logo {
+    position: absolute;
+    top: 62px;
+    right: 100px;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 12%;
+    right: 10%;
+    text-align: left;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centered-top-1 {
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centered-top-2 {
+    position: absolute;
+    top: 26%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    font-weight: 700;
+    /* identical to box height */
+
+    color: #23304e;
+}
+
+.centered-top-3 {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Yesteryear;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 38px;
+    color: #484a47;
+}
+
+.centered-top-4 {
+    position: absolute;
+    top: 52%;
+    left: 20%;
+    transform: translate(-13%, -50%);
+    font-style: normal;
+    font-weight: 100;
+    font-size: 26px;
+    font-family: poppins;
+    color: #484a47;
+}
+
+.footer-1-name {
+    color: black;
+    font-family: "poppins";
+    font-weight: 100;
+}
