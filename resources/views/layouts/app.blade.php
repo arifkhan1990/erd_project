@@ -8,25 +8,35 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Bangladesh Sweden Trust Fund</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    {{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
+
+    <link rel="stylesheet" href="{{ asset('assets/css/app.min.css') }}">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/components.css') }}">
+    <!-- Custom style CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
 </head>
 
-<body>
+<body
+    style="background-image: url({{ asset('assets/images/ssskrrr.png') }});background-repeat: no-repeat; height: 100%; background-size: cover;">
+    <div class="loader"></div>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm" style="left: 0;">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                <a class="navbar-brand" href="{{ url('/') }}"
+                    style="color: rgba(0, 0, 0, 0.9) !important; font-size: 1.125rem !important; line-height: inherit !important;">
+                    Bangladesh Sweden Trust Fund
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -81,6 +91,15 @@
             @yield('content')
         </main>
     </div>
+
+    <!-- General JS Scripts -->
+    <script src="{{ asset('assets/js/app.min.js') }}"></script>
+    <!-- JS Libraies -->
+    <!-- Page Specific JS File -->
+    <!-- Template JS File -->
+    <script src="{{ asset('assets/js/scripts.js') }}"></script>
+    <!-- Custom JS File -->
+    <script src="{{ asset('assets/js/custom.js') }}"></script>
 </body>
 
 </html>

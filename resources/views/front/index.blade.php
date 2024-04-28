@@ -28,7 +28,7 @@
 
         <div class="content">
             <nav class="navbar navbar-expand-lg navbar-light" style="background-color: transparent">
-                <a class="navbar-brand" href="#" id="navbar_brand">Bangladesh Sweden Trust Fund</a>
+                <a class="navbar-brand" href="/" id="navbar_brand">Bangladesh Sweden Trust Fund</a>
 
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -72,11 +72,11 @@
 
                         @if (auth()->user() == null)
                             <li class="nav-item active">
-                                <a class="nav-link" href="#" id="sign_in">Sign In </a>
+                                <a class="nav-link" href="{{ route('login') }}" id="sign_in">Sign In </a>
                             </li>
                         @else
                             <li class="nav-item active">
-                                <a class="nav-link" href="#" id="">Logout </a>
+                                <a class="nav-link" href="{{ route('logout') }}" id="">Logout </a>
                             </li>
                         @endif
 

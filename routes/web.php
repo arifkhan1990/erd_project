@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\FrontPageController;
+use App\Http\Controllers\UserAdminController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -33,3 +35,10 @@ Route::get('faq', [FrontPageController::class, 'faq'])->name('front.faq');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+// user
+Route::get('user-admin', [UserAdminController::class, 'dashboard'])->name('user.dashboard');
+Route::get('user-about', [UserAdminController::class, 'about'])->name('user.about');
+Route::get('user-profile', [UserAdminController::class, 'profile'])->name('user.profile');
+Route::get('user-application', [ApplicationController::class, 'index'])->name('user.application');
