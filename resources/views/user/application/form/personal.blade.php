@@ -1,4 +1,4 @@
-<div class="form-row">
+<div class="form-row custom-spacing">
     <div class="form-group form-float col-6">
         <div class="form-line">
             <label class="form-label">Applicant's first name (as in passport) <span style="color: red;">**</span></label>
@@ -14,7 +14,7 @@
         </div>
     </div>
 </div>
-<div class="form-row">
+<div class="form-row custom-spacing">
     <div class="form-group form-float col-6">
         <div class="form-line">
             <label class="form-label">Applicant's Image</label>
@@ -25,30 +25,28 @@
     <div class="form-group form-float col-6">
         <div class="form-line">
             <label class="form-label">Gender<span style="color: red;">**</span></label>
+            <!-- Radio button for Male -->
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="gender" id="male" value="male" />
-                <label class="form-check-label" for="exampleRadios1">
-                    Male
-                </label>
+                <label class="form-check-label" for="male">Male</label>
             </div>
 
+            <!-- Radio button for Female -->
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="gender" id="female" value="female" />
-                <label class="form-check-label" for="exampleRadios1">
-                    Female
-                </label>
+                <label class="form-check-label" for="female">Female</label>
             </div>
 
+            <!-- Radio button for Other -->
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="gender" id="other" value="other" />
-                <label class="form-check-label" for="exampleRadios1">
-                    Other
-                </label>
+                <label class="form-check-label" for="other">Other</label>
             </div>
         </div>
+
     </div>
 </div>
-<div class="form-row">
+<div class="form-row custom-spacing">
     <div class="form-group form-float col-6">
         <div class="form-line">
             <label class="form-label">Digital Signature Image [ 300px * 300px ]<span
@@ -65,7 +63,7 @@
         </div>
     </div>
 </div>
-<div class="form-row">
+<div class="form-row custom-spacing">
     <div class="form-group form-float col-6">
         <div class="form-line">
             <label class="form-label">NID Image<span style="color: red;">**</span></label>
@@ -82,7 +80,7 @@
     </div>
 </div>
 
-<div class="form-row">
+<div class="form-row custom-spacing">
     <div class="form-group form-float col-6">
         <div class="form-line">
             <label class="form-label">Applicant's date of birth<span style="color: red;">**</span></label>
@@ -102,7 +100,7 @@
         </div>
     </div>
 </div>
-<div class="form-row">
+<div class="form-row custom-spacing">
     <div class="form-group form-float col-6">
         <div class="form-line">
             <label class="form-label">Applicant's mother's NID number<span style="color: red;">**</span></label>
@@ -127,7 +125,7 @@ is-invalid
 
 </div>
 
-<div class="form-row">
+<div class="form-row custom-spacing">
     <div class="form-group form-float col-6">
         <div class="form-line">
             <label class="form-label">Mother's gross monthly income<span style="color: red;">**</span></label>
@@ -149,7 +147,7 @@ is-invalid
 
 
 
-<div class="form-row">
+<div class="form-row custom-spacing">
     <div class="form-group form-float col-6">
         <div class="form-line">
             <label class="form-label">Details of father's profession including name of office,
@@ -172,7 +170,7 @@ is-invalid
 
 </div>
 
-<div class="form-row">
+<div class="form-row custom-spacing">
     <div class="form-group form-float col-6">
         <div class="form-line">
             <label class="form-label">Applicant's contact address in Bangladesh<span
@@ -194,7 +192,7 @@ is-invalid
 
 </div>
 
-<div class="form-row">
+<div class="form-row custom-spacing">
     <div class="form-group form-float col-6">
         <div class="form-line">
             <label class="form-label">Applicant's current phone number (with country code and city

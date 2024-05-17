@@ -16,8 +16,16 @@
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/components.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/form.css') }}">
     <!-- Custom style CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/bundles/bootstrap-daterangepicker/daterangepicker.css') }}">
+    <style>
+        .custom-spacing .form-group {
+            padding: 0 15px;
+            margin-bottom: 30px;
+        }
+    </style>
 </head>
 
 <body>
@@ -205,23 +213,45 @@
             </footer>
         </div>
     </div>
+
     <!-- General JS Scripts -->
     <script src="{{ asset('assets/js/app.min.js') }}"></script>
     <!-- JS Libraies -->
-    <script src="{{ asset('assets/bundles/jquery-validation/dist/jquery.validate.min.js') }}"></script>
-    <!-- JS Libraies -->
+    <script type="text/javascript" src="{{ asset('assets/bundles/jquery-validation/dist/jquery.validate.min.js') }}">
+        <!-- JS Libraies 
+        -->
     <script src="{{ asset('assets/bundles/jquery-steps/jquery.steps.min.js') }}"></script>
     <!-- Page Specific JS File -->
     <script src="{{ asset('assets/js/page/form-wizard.js') }}"></script>
-
+    <script src="{{ asset('assets/bundles/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
     <script src="{{ asset('assets/bundles/apexcharts/apexcharts.min.js') }}"></script>
     <script src="{{ asset('assets/bundles/summernote/summernote-bs4.js') }}"></script>
     <!-- Page Specific JS File -->
     <script src="{{ asset('assets/js/page/index.js') }}"></script>
+    {{-- <script src="{{ asset('assets/js/page/form-wizard.js') }}"></script> --}}
+
     <!-- Template JS File -->
     <script src="{{ asset('assets/js/scripts.js') }}"></script>
     <!-- Custom JS File -->
     <script src="{{ asset('assets/js/custom.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            // Initialize the year picker for SSC and HSC passing year fields
+            $('#ssc_passing_year').datepicker({
+                format: "yyyy",
+                startView: "years",
+                minViewMode: "years",
+                autoclose: true
+            });
+
+            $('#hsc_passing_year').datepicker({
+                format: "yyyy",
+                startView: "years",
+                minViewMode: "years",
+                autoclose: true
+            });
+        });
+    </script>
 </body>
 
 </html>
