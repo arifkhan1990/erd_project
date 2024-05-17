@@ -15,97 +15,19 @@
                             <form id="wizard_with_validation" method="POST">
                                 <h3>Personal Information</h3>
                                 <fieldset>
-                                    <div class="form-row">
-                                        <div class="form-group form-float col-6">
-                                            <div class="form-line">
-                                                <label class="form-label">Username <span
-                                                        style="color: red;">**</span></label>
-                                                <input type="text" class="form-control" name="username" required>
-                                            </div>
-                                        </div>
-                                        <div class="form-group form-float col-6">
-                                            <div class="form-line">
-                                                <label class="form-label">Password<span
-                                                        style="color: red;">**</span></label>
-                                                <input type="password" class="form-control" name="password" id="password"
-                                                    required>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="form-group form-float col-6">
-                                            <div class="form-line">
-                                                <label class="form-label">Username<span
-                                                        style="color: red;">**</span></label>
-                                                <input type="text" class="form-control" name="username" required>
-                                            </div>
-                                        </div>
-                                        <div class="form-group form-float col-6">
-                                            <div class="form-line">
-                                                <label class="form-label">Password<span
-                                                        style="color: red;">**</span></label>
-                                                <input type="password" class="form-control" name="password" id="password"
-                                                    required>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="form-group form-float col-6">
-                                            <div class="form-line">
-                                                <label class="form-label">Username<span
-                                                        style="color: red;">**</span></label>
-                                                <input type="text" class="form-control" name="username" required>
-                                            </div>
-                                        </div>
-                                        <div class="form-group form-float col-6">
-                                            <div class="form-line">
-                                                <label class="form-label">Password<span
-                                                        style="color: red;">**</span></label>
-                                                <input type="password" class="form-control" name="password" id="password"
-                                                    required>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @include('user.application.form.personal')
                                 </fieldset>
                                 <h3>Educational Information</h3>
                                 <fieldset>
-                                    <div class="form-group form-float">
-                                        <div class="form-line">
-                                            <label class="form-label">First Name<span style="color: red;">**</span></label>
-                                            <input type="text" name="name" class="form-control" required>
-                                        </div>
-                                    </div>
-                                    <div class="form-group form-float">
-                                        <div class="form-line">
-                                            <label class="form-label">Last Name<span style="color: red;">**</span></label>
-                                            <input type="text" name="surname" class="form-control" required>
-                                        </div>
-                                    </div>
-                                    <div class="form-group form-float">
-                                        <div class="form-line">
-                                            <label class="form-label">Email<span style="color: red;">**</span></label>
-                                            <input type="email" name="email" class="form-control" required>
-                                        </div>
-                                    </div>
-                                    <div class="form-group form-float">
-                                        <div class="form-line">
-                                            <label class="form-label">Address<span style="color: red;">**</span></label>
-                                            <textarea name="address" cols="30" rows="3" class="form-control no-resize" required></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="form-group form-float">
-                                        <div class="form-line">
-                                            <label class="form-label">Age<span style="color: red;">**</span></label>
-                                            <input min="18" type="number" name="age" class="form-control"
-                                                required>
-                                        </div>
-                                        <div class="help-info">The warning step will show up if age is less than 18</div>
-                                    </div>
+                                    @include('user.application.form.educational')
                                 </fieldset>
-                                <h3>Terms &amp; Conditions - Finish</h3>
+                                <h3>Banking Information</h3>
                                 <fieldset>
-                                    <input id="acceptTerms-2" name="acceptTerms" type="checkbox" required>
-                                    <label for="acceptTerms-2">I agree with the Terms and Conditions.</label>
+                                    @include('user.application.form.banking')
+                                </fieldset>
+                                <h3>Travel Information</h3>
+                                <fieldset>
+                                    @include('user.application.form.travel')
                                 </fieldset>
                             </form>
                         </div>
