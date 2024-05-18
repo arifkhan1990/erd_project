@@ -107,9 +107,7 @@
             <input type="number" class="form-control" id="mothers_nid"
                 placeholder="Enter applicant's mother's NID number" name="mothers_nid"
                 oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-                maxlength="17" minlength="10" min="0" class="@error('mothers_nid')
-is-invalid
-@enderror"
+                maxlength="17" minlength="10" min="0" class="@error('mothers_nid') is-invalid @enderror"
                 required />
         </div>
     </div>

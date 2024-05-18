@@ -2,7 +2,7 @@
     <div class="form-group form-float col-6">
         <div class="form-line">
             <label class="form-label">SSC Exam Result Type<span style="color: red;">**</span></label>
-            <select class="form-control" id="ssc_result_type" name="ssc_result_type" onchange="toggleSscResultOptions()">
+            <select class="form-control" id="ssc_exam_result_type" name="ssc_exam_result_type" onchange="toggleSscResultOptions()">
                 <option value="">Select Result Type</option>
                 <option value="division">Division</option>
                 <option value="gpa">GPA</option>
@@ -12,7 +12,7 @@
     <div class="form-group form-float col-6" id="ssc_division_options" style="display:none;">
         <div class="form-line">
             <label class="form-label">SSC Exam Result (Division)<span style="color: red;">**</span></label>
-            <select class="form-control" id="ssc_exam_result_division" name="ssc_exam_result_division">
+            <select class="form-control" id="ssc_exam_result_division" name="ssc_exam_result">
                 <option value="1st">1st Division</option>
                 <option value="2nd">2nd Division</option>
                 <option value="3rd">3rd Division</option>
@@ -44,7 +44,7 @@
     <div class="form-group form-float col-6">
         <div class="form-line">
             <label class="form-label">HSC Exam Result Type<span style="color: red;">**</span></label>
-            <select class="form-control" id="hsc_result_type" name="hsc_result_type"
+            <select class="form-control" id="hsc_exam_result_type" name="hsc_exam_result_type"
                 onchange="toggleHscResultOptions()">
                 <option value="">Select Result Type</option>
                 <option value="division">Division</option>
@@ -55,7 +55,7 @@
     <div class="form-group form-float col-6" id="hsc_division_options" style="display:none;">
         <div class="form-line">
             <label class="form-label">HSC Exam Result (Division)<span style="color: red;">**</span></label>
-            <select class="form-control" id="hsc_exam_result_division" name="hsc_exam_result_division">
+            <select class="form-control" id="hsc_exam_result" name="hsc_exam_result">
                 <option value="1st">1st Division</option>
                 <option value="2nd">2nd Division</option>
                 <option value="3rd">3rd Division</option>
@@ -280,13 +280,13 @@
 
 <script>
     function toggleSscResultOptions() {
-        var resultType = document.getElementById('ssc_result_type').value;
+        var resultType = document.getElementById('ssc_exam_result_type').value;
         document.getElementById('ssc_division_options').style.display = (resultType === 'division') ? 'block' : 'none';
         document.getElementById('ssc_gpa_options').style.display = (resultType === 'gpa') ? 'block' : 'none';
     }
 
     function toggleHscResultOptions() {
-        var resultType = document.getElementById('hsc_result_type').value;
+        var resultType = document.getElementById('hsc_exam_result_type').value;
         document.getElementById('hsc_division_options').style.display = (resultType === 'division') ? 'block' : 'none';
         document.getElementById('hsc_gpa_options').style.display = (resultType === 'gpa') ? 'block' : 'none';
     }

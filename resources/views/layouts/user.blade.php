@@ -217,9 +217,8 @@
     <!-- General JS Scripts -->
     <script src="{{ asset('assets/js/app.min.js') }}"></script>
     <!-- JS Libraies -->
-    <script type="text/javascript" src="{{ asset('assets/bundles/jquery-validation/dist/jquery.validate.min.js') }}">
-        <!-- JS Libraies 
-        -->
+    <script type="text/javascript" src="{{ asset('assets/bundles/jquery-validation/dist/jquery.validate.min.js') }}"></script>
+
     <script src="{{ asset('assets/bundles/jquery-steps/jquery.steps.min.js') }}"></script>
     <!-- Page Specific JS File -->
     <script src="{{ asset('assets/js/page/form-wizard.js') }}"></script>
@@ -234,24 +233,6 @@
     <script src="{{ asset('assets/js/scripts.js') }}"></script>
     <!-- Custom JS File -->
     <script src="{{ asset('assets/js/custom.js') }}"></script>
-    <script>
-        $(document).ready(function() {
-            // Initialize the year picker for SSC and HSC passing year fields
-            $('#ssc_passing_year').datepicker({
-                format: "yyyy",
-                startView: "years",
-                minViewMode: "years",
-                autoclose: true
-            });
-
-            $('#hsc_passing_year').datepicker({
-                format: "yyyy",
-                startView: "years",
-                minViewMode: "years",
-                autoclose: true
-            });
-        });
-    </script>
 </body>
 
 </html>

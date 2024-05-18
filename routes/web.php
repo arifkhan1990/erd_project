@@ -41,4 +41,13 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('user-admin', [UserAdminController::class, 'dashboard'])->name('user.dashboard');
 Route::get('user-about', [UserAdminController::class, 'about'])->name('user.about');
 Route::get('user-profile', [UserAdminController::class, 'profile'])->name('user.profile');
-Route::get('user-application', [ApplicationController::class, 'index'])->name('user.application');
+// Route::get('user-application', [ApplicationController::class, 'index'])->name('user.application');
+
+
+
+Route::get('user-application', [ApplicationController::class, 'create'])->name('user.application');
+Route::post('form/store', [ApplicationController::class, 'store'])->name('form.store');
+Route::get('form', [ApplicationController::class, 'index'])->name('form.index');
+Route::get('form/{id}/edit', [ApplicationController::class, 'edit'])->name('form.edit');
+Route::put('form/{id}', [ApplicationController::class, 'update'])->name('form.update');
+Route::delete('form/{id}', [ApplicationController::class, 'destroy'])->name('form.destroy');

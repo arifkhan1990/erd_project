@@ -46,7 +46,8 @@
                                 <h4>Register</h4>
                             </div>
                             <div class="card-body">
-                                <form method="POST">
+                                <form method="POST" action={{ route('register') }}>
+                                    @csrf
                                     <div class="row">
                                         <div class="form-group col-6">
                                             <label for="frist_name">First Name</label>
