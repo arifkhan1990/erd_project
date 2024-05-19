@@ -12,7 +12,8 @@
     <div class="form-group form-float col-6" id="ssc_division_options" style="display:none;">
         <div class="form-line">
             <label class="form-label">SSC Exam Result (Division)<span style="color: red;">**</span></label>
-            <select class="form-control" id="ssc_exam_result_division" name="ssc_exam_result">
+            <select class="form-control" id="ssc_exam_result_division" name="ssc_exam_result_division">
+                <option value="">Select Result</option>
                 <option value="1st">1st Division</option>
                 <option value="2nd">2nd Division</option>
                 <option value="3rd">3rd Division</option>
@@ -55,7 +56,8 @@
     <div class="form-group form-float col-6" id="hsc_division_options" style="display:none;">
         <div class="form-line">
             <label class="form-label">HSC Exam Result (Division)<span style="color: red;">**</span></label>
-            <select class="form-control" id="hsc_exam_result" name="hsc_exam_result">
+            <select class="form-control" id="hsc_exam_result_division" name="hsc_exam_result_division">
+                <option value="">Select Result</option>
                 <option value="1st">1st Division</option>
                 <option value="2nd">2nd Division</option>
                 <option value="3rd">3rd Division</option>

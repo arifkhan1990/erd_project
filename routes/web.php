@@ -33,14 +33,20 @@ Route::get('message2', [FrontPageController::class, 'message2'])->name('front.me
 Route::get('faq', [FrontPageController::class, 'faq'])->name('front.faq');
 
 Auth::routes();
+Route::get('/logout', function () {
+    auth()->logout();
+    return redirect("/");
+})->name('logout-page');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
 // user
-Route::get('user-admin', [UserAdminController::class, 'dashboard'])->name('user.dashboard');
+Route::get('/dashboard', [UserAdminController::class, 'dashboard'])->name('user.dashboard');
 Route::get('user-about', [UserAdminController::class, 'about'])->name('user.about');
-Route::get('user-profile', [UserAdminController::class, 'profile'])->name('user.profile');
+Route::get('user-profile/{id}', [UserAdminController::class, 'profile'])->name('user.profile');
+Route::put('user-profile-update/{id}', [UserAdminController::class, 'update'])->name('user.update');
+Route::put('user-profile/password-change/{id}', [UserAdminController::class, 'changePassword'])->name('user.profile.password_change');
 // Route::get('user-application', [ApplicationController::class, 'index'])->name('user.application');
 
 

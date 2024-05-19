@@ -13,8 +13,10 @@ return new class extends Migration
     {
         Schema::create('educationals', function (Blueprint $table) {
             $table->id();
+            $table->string("ssc_exam_result_type");
             $table->string("ssc_exam_result");
             $table->string("ssc_passing_year");
+            $table->string("hsc_exam_result_type");
             $table->string("hsc_exam_result");
             $table->string("hsc_passing_year");
             $table->string("academic_degree");

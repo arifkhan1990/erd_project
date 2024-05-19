@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('fname');
             $table->string('lname');
 
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->string('gender');
             $table->string('digital_signature_image');
 

@@ -16,7 +16,10 @@ class PersonalForm extends Model
         'dob', 'mothers_name', 'mothers_nid', 'mothers_profession', 'mothers_gross_income', 'fathers_name', 'fathers_profession', 
         'fathers_gross_income', 'contact_address', 'permanent_address', 'phone_number', 'user_id'
     ];
-
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
     public function educational()
     {
         return $this->hasOne(Educational::class, 'user_id', 'user_id');

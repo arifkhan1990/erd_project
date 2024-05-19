@@ -9,6 +9,7 @@ use App\Models\Banking;
 use App\Models\Travel;
 use Illuminate\Http\Request;
 use DB;
+use Auth;
 
 class ApplicationController extends Controller
 {
@@ -21,8 +22,7 @@ class ApplicationController extends Controller
     // Store new form entries
     public function store(Request $request)
     {
-        // dd("hi");
-        $request->user_id = 2;
+        
         DB::beginTransaction();
         try {
             // Personal Form
@@ -42,11 +42,11 @@ class ApplicationController extends Controller
             $this->saveTravelForm($request, $travel);
 
             DB::commit();
-            return redirect()->back()->with('success', 'Form submitted successfully!');
+            return redirect()->route('user.dashboard')->with('success', 'Application submitted successfully!');
         } catch (\Exception $e) {
             DB::rollBack();
             dd($e);
-            // return redirect()->back()->with('error', 'Failed to submit the form: ' . $e->getMessage());
+            return redirect()->back()->with('error', 'Failed to submit the form: ' . $e->getMessage());
         }
     }
 
@@ -137,32 +137,40 @@ class ApplicationController extends Controller
     {   
         $personalForm->fill($request->all());
         if ($request->hasFile('image')) {
-            $personalForm->image = $request->file('image')->store('images');
+            $personalForm->image = $request->file('image')->store('images','public');
         }
         if ($request->hasFile('digital_signature_image')) {
-            $personalForm->digital_signature_image = $request->file('digital_signature_image')->store('images');
+            $personalForm->digital_signature_image = $request->file('digital_signature_image')->store('images','public');
         }
         if ($request->hasFile('passport_image')) {
-            $personalForm->passport_image = $request->file('passport_image')->store('images');
+            $personalForm->passport_image = $request->file('passport_image')->store('images','public');
         }
         if ($request->hasFile('nid_image')) {
-            $personalForm->nid_image = $request->file('nid_image')->store('images');
+            $personalForm->nid_image = $request->file('nid_image')->store('images','public');
         }
         if ($request->hasFile('certification_image')) {
-            $personalForm->certification_image = $request->file('certification_image')->store('images');
+            $personalForm->certification_image = $request->file('certification_image')->store('images','public');
         }
         $personalForm->save();
     }
 
     private function saveEducationalForm(Request $request, $educational)
     {
-        if ($request->ssc_exam_result_type == 'gpa') {
-            $request->ssc_exam_result = $request->ssc_exam_result_gpa . " Out of " . $request->ssc_exam_result_gpa_max;
-        }
-        if($request->hsc_exam_result_type == 'gpa') {
-            $request->hsc_exam_result = $request->hsc_exam_result_gpa . " Out of " . $request->hsc_exam_result_gpa_max;
-        }
+
         $educational->fill($request->all());
+
+        if ($request->ssc_exam_result_type == 'gpa') {
+            $edu_data->ssc_exam_result = $request->ssc_exam_result_gpa . " Out of " . $request->ssc_exam_result_gpa_max;
+        }else {
+            $educational->ssc_exam_result = $request->ssc_exam_result_division;
+        }
+
+        if($request->hsc_exam_result_type == 'gpa') {
+            $educational->hsc_exam_result = $request->hsc_exam_result_gpa . " Out of " . $request->hsc_exam_result_gpa_max;
+        }else{
+            $educational->hsc_exam_result = $request->hsc_exam_result_division;
+        }
+
         $educational->user_id = $request->user_id;
         $educational->save();
     }

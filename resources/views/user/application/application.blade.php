@@ -4,6 +4,16 @@
 
 @section('content')
     <section class="section">
+        @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+        @if(session('error'))
+            <div class="alert alert-danger">
+                {{ session('error') }}
+            </div>
+        @endif
         <div class="section-body">
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -30,7 +40,7 @@
                                 <fieldset>
                                     @include('user.application.form.travel')
                                 </fieldset>
-                                <input type="hidden" name="user_id" value="2">
+                                <input type="hidden" name="user_id" value="{{Auth::id()}}">
                             </form>
                         </div>
                     </div>

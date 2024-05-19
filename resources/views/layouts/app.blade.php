@@ -10,15 +10,14 @@
 
     <title>Bangladesh Sweden Trust Fund</title>
 
-    <!-- Scripts -->
-    {{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/sign_in.css') }}" />
+
+
+    <link rel="stylesheet" href="{{ asset('assets/bundles/jquery-selectric/selectric.css') }}">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
-    <!-- Styles -->
-    {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
 
     <link rel="stylesheet" href="{{ asset('assets/css/app.min.css') }}">
     <!-- Template CSS -->
@@ -32,60 +31,15 @@
     style="background-image: url({{ asset('assets/images/ssskrrr.png') }});background-repeat: no-repeat; height: 100%; background-size: cover;">
     <div class="loader"></div>
     <div id="app">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm" style="left: 0;">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}"
-                    style="color: rgba(0, 0, 0, 0.9) !important; font-size: 1.125rem !important; line-height: inherit !important;">
+        <div class="content" style="background: transparent;">
+            <nav class="navbar" style="position: relative !important; left: 0px;">
+                <a class="navbar-brand" href="/"
+                    style="color: #000 !important; letter-spacing: 1.5px !important;padding-left: 30px !important">
                     Bangladesh Sweden Trust Fund
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            </nav>
+        </div>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
 
         <main class="py-4">
             @yield('content')
@@ -95,8 +49,17 @@
     <!-- General JS Scripts -->
     <script src="{{ asset('assets/js/app.min.js') }}"></script>
     <!-- JS Libraies -->
+        <!-- General JS Scripts -->
+    <script src="{{ asset('assets/js/app.min.js') }}"></script>
+
+
+    <!-- JS Libraies -->
+    <script src="{{ asset('assets/bundles/jquery-pwstrength/jquery.pwstrength.min.js') }}"></script>
+    <script src="{{ asset('assets/bundles/jquery-selectric/jquery.selectric.min.js') }}"></script>
     <!-- Page Specific JS File -->
-    <!-- Template JS File -->
+    <script src="{{ asset('assets/js/page/auth-register.js') }}"></script>
+
+
     <script src="{{ asset('assets/js/scripts.js') }}"></script>
     <!-- Custom JS File -->
     <script src="{{ asset('assets/js/custom.js') }}"></script>

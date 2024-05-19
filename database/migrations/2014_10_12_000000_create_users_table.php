@@ -18,6 +18,9 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('admin')->default('user');
+            $table->string('occupation')->default('Student');
+            $table->string('bio')->default('🌱 Growing one book at a time');
+            $table->string('profile_pic')->default('https://avatar.iran.liara.run/public/boy?username=Ash');
             $table->rememberToken();
             $table->timestamps();
         });
