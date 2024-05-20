@@ -1,19 +1,3 @@
-@if (session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-@endif
-
-@if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
-
 <form method="post" class="needs-validation" action="{{ route('user.profile.password_change', ['id' => Auth::id()]) }}" id="passwordForm" novalidate>
     @csrf
     @method('PUT')
@@ -37,9 +21,9 @@
             </div>
         </div>
         <div class="form-group row">
-            <label for="confirm_password" class="col-sm-3 col-form-label">Confirm Password</label>
+            <label for="password_confirmation" class="col-sm-3 col-form-label">Confirm Password</label>
             <div class="col-sm-9">
-                <input type="password" class="form-control" id="confirm_password" placeholder="Confirm Password" name="confirm_password" required>
+                <input type="password" class="form-control" id="password_confirmation" placeholder="Confirm Password" name="password_confirmation" required>
                 <div class="invalid-feedback" id="confirmPasswordError">
                     Passwords do not match.
                 </div>
@@ -54,9 +38,9 @@
 <script>
     document.getElementById('passwordForm').addEventListener('submit', function(event) {
         let password = document.getElementById('password').value;
-        let confirmPassword = document.getElementById('confirm_password').value;
+        let confirmPassword = document.getElementById('password_confirmation').value;
         let passwordInput = document.getElementById('password');
-        let confirmPasswordInput = document.getElementById('confirm_password');
+        let confirmPasswordInput = document.getElementById('password_confirmation');
         let confirmPasswordError = document.getElementById('confirmPasswordError');
 
         // Reset classes
@@ -75,10 +59,10 @@
     });
 
     // Real-time validation
-    document.getElementById('confirm_password').addEventListener('input', function() {
+    document.getElementById('password_confirmation').addEventListener('input', function() {
         let password = document.getElementById('password').value;
-        let confirmPassword = document.getElementById('confirm_password').value;
-        let confirmPasswordInput = document.getElementById('confirm_password');
+        let confirmPassword = document.getElementById('password_confirmation').value;
+        let confirmPasswordInput = document.getElementById('password_confirmation');
         let confirmPasswordError = document.getElementById('confirmPasswordError');
 
         // Reset class

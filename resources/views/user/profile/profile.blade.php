@@ -3,21 +3,6 @@
 
 
 @section('content')
-@if (session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-@endif
-
-@if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
     <section class="section">
         <div class="section-body">
             <div class="row mt-sm-4">
@@ -40,7 +25,7 @@
                                     </p>
                                 </div>
                                 <div class="mb-2 mt-3">
-                                    <div class="text-small font-weight-bold">Follow Hasan On</div>
+                                    <div class="text-small font-weight-bold">Follow {{$user->name}} On</div>
                                 </div>
                                 <a href="#" class="btn btn-social-icon mr-1 btn-facebook">
                                     <i class="fab fa-facebook-f"></i>

@@ -35,7 +35,7 @@
     <div class="form-group form-float col-6">
         <div class="form-line">
             <label class="form-label">SSC Passing Year<span style="color: red;">**</span></label>
-            <input type="text" class="form-control datepicker" id="ssc_passing_year"
+            <input type="date" class="form-control" id="ssc_passing_year"
                 placeholder="Enter SSC Passing Year" name="ssc_passing_year" required />
         </div>
     </div>
@@ -79,7 +79,7 @@
     <div class="form-group form-float col-6">
         <div class="form-line">
             <label class="form-label">HSC Passing Year<span style="color: red;">**</span></label>
-            <input type="text" class="form-control datepicker" id="hsc_passing_year"
+            <input type="date" class="form-control datepicker" id="hsc_passing_year"
                 placeholder="Enter HSC Passing Year" name="hsc_passing_year" required />
         </div>
     </div>

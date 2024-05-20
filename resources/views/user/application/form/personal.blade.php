@@ -2,14 +2,14 @@
     <div class="form-group form-float col-6">
         <div class="form-line">
             <label class="form-label">Applicant's first name (as in passport) <span style="color: red;">**</span></label>
-            <input type="text" class="form-control" id="first_name" aria-describedby="emailHelp" placeholder="eg- Afia"
+            <input type="text" class="form-control" id="first_name" placeholder="eg- Afia"
                 name="fname" class="@error('fname') is-invalid @enderror" required />
         </div>
     </div>
     <div class="form-group form-float col-6">
         <div class="form-line">
             <label class="form-label">Applicant's last name (as in passport)<span style="color: red;">**</span></label>
-            <input type="text" class="form-control" id="last_name" aria-describedby="emailHelp"
+            <input type="text" class="form-control" id="last_name"
                 placeholder="eg- Tasnum" name="lname" class="@error('lname') is-invalid @enderror" />
         </div>
     </div>
@@ -84,7 +84,7 @@
     <div class="form-group form-float col-6">
         <div class="form-line">
             <label class="form-label">Applicant's date of birth<span style="color: red;">**</span></label>
-            <input type="date" class="form-control" id="dob" aria-describedby="emailHelp"
+            <input type="date" class="form-control" id="dob"
                 placeholder="Enter applicant's date of birth" name="dob"
                 max='{{ Carbon\Carbon::now()->subYear(10)->toDateString() }}'
                 class="@error('dob') is-invalid @enderror" required />
@@ -94,7 +94,7 @@
         <div class="form-line">
             <label class="form-label">Applicant's mother's name (as in passport)<span
                     style="color: red;">**</span></label>
-            <input type="text" class="form-control" id="mothers_name" aria-describedby="emailHelp"
+            <input type="text" class="form-control" id="mothers_name"
                 placeholder="Enter applicant's mother's name" name="mothers_name"
                 class="@error('mothers_name') is-invalid @enderror" required />
         </div>
@@ -115,7 +115,7 @@
         <div class="form-line">
             <label class="form-label">Details of mother's profession including name of office,
                 designation, phone and email<span style="color: red;">**</span></label>
-            <input type="text" class="form-control" id="mothers_profession" aria-describedby="emailHelp"
+            <input type="text" class="form-control" id="mothers_profession"
                 placeholder="Enter Details of mother's profession" name="mothers_profession"
                 class="@error('mothers_profession') is-invalid @enderror" required />
         </div>
@@ -127,7 +127,7 @@
     <div class="form-group form-float col-6">
         <div class="form-line">
             <label class="form-label">Mother's gross monthly income<span style="color: red;">**</span></label>
-            <input type="number" class="form-control" id="mothers_gross_income" aria-describedby="emailHelp"
+            <input type="number" class="form-control" id="mothers_gross_income"
                 placeholder="Enter monthly income" name="mothers_gross_income" min="0"
                 class="@error('mothers_gross_income') is-invalid @enderror" required />
         </div>
@@ -136,7 +136,7 @@
         <div class="form-line">
             <label class="form-label">Applicant's father's name (as in passport)<span
                     style="color: red;">**</span></label>
-            <input type="text" class="form-control" id="fathers_name" aria-describedby="emailHelp"
+            <input type="text" class="form-control" id="fathers_name"
                 placeholder="Enter father's name" name="fathers_name"
                 class="@error('fathers_name') is-invalid @enderror" required />
         </div>
@@ -150,7 +150,7 @@
         <div class="form-line">
             <label class="form-label">Details of father's profession including name of office,
                 designation, phone and email<span style="color: red;">**</span></label>
-            <input type="text" class="form-control" id="fathers_profession" aria-describedby="emailHelp"
+            <input type="text" class="form-control" id="fathers_profession"
                 placeholder="Enter father's profession" name="fathers_profession"
                 class="@error('fathers_profession') is-invalid @enderror" required />
         </div>
@@ -159,7 +159,7 @@
         <div class="form-line">
             <label class="form-label">Applicant's father's gross monthly income<span
                     style="color: red;">**</span></label>
-            <input type="number" class="form-control" id="fathers_gross_income" aria-describedby="emailHelp"
+            <input type="number" class="form-control" id="fathers_gross_income"
                 placeholder="Enter monthly income" name="fathers_gross_income" min="0"
                 class="@error('fathers_gross_income') is-invalid @enderror" required />
         </div>
@@ -173,7 +173,7 @@
         <div class="form-line">
             <label class="form-label">Applicant's contact address in Bangladesh<span
                     style="color: red;">**</span></label>
-            <input type="text" class="form-control" id="contact_address" aria-describedby="emailHelp"
+            <input type="text" class="form-control" id="contact_address"
                 placeholder="Enter contact address" name="contact_address"
                 class="@error('contact_address') is-invalid @enderror" required />
         </div>
@@ -182,7 +182,7 @@
         <div class="form-line">
             <label class="form-label">Applicant's permanent address in Bangladesh (as in passport)<span
                     style="color: red;">**</span></label>
-            <input type="text" class="form-control" id="permanent_address" aria-describedby="emailHelp"
+            <input type="text" class="form-control" id="permanent_address"
                 placeholder="Enter permanent address" name="permanent_address"
                 class="@error('permanent_address') is-invalid @enderror" required />
         </div>

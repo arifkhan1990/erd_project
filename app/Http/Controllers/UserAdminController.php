@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Hash;
 
 class UserAdminController extends Controller
 {
@@ -69,12 +70,12 @@ class UserAdminController extends Controller
     public function changePassword(Request $request, $id)
     {
         // Validate the form data
+        
         try {
             $request->validate([
                 'current_password' => 'required',
-                'password' => 'required|string|min:8|confirmed',
+                'password' => 'required|string|min:6|confirmed',
             ]);
-
             // Get the current authenticated user
             $user = User::findOrFail($id);
 
@@ -90,8 +91,7 @@ class UserAdminController extends Controller
             // Redirect back with success message
             return redirect()->route('user.profile', ['id' => $id])->with('success', 'Password changed successfully!');
         }catch(\Exception $e) {
-            // dd($e);
-            return redirect()->route('user.profile', ['id' => $id])->with('error', 'Password change Unsuccessfull!');
+            return redirect()->route('user.profile', ['id' => $id])->with('error','Password change Unsuccessfull!');
         }
     }
 }
