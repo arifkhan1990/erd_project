@@ -24,8 +24,14 @@ class UserAdminController extends Controller
         } else {
             $time_difference = "Not yet set by admin";
         }
-
-        return view('user.dashboard.dashboard', compact('time_difference'));
+        $user = User::with([
+            'personal',
+            'educational',
+            'travel',
+            'banking',
+            'application'
+        ])->findOrFail(auth()->user()->id);
+        return view('user.dashboard.dashboard', compact('time_difference', 'user'));
     }
 
     public function about()

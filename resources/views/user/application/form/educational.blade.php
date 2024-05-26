@@ -115,8 +115,12 @@
         <div class="form-line">
             <label class="form-label">Country to which applicant is planning to study/studying <span
                     style="color: red;">**</span></label>
-            <input type="text" class="form-control" id="study_country" name="study_country"
-                placeholder="Enter Your Answer" required>
+            <select class="form-control" id="study_country" name="study_country" required>
+                <option value="" disabled selected>Select a country</option>
+                @foreach ($countries as $country)
+                    <option value="{{ $country['country_name_en] }}">{{ $country['country_name_en'] }}</option>
+                @endforeach
+            </select>
         </div>
     </div>
     <div class="form-group form-float col-6">

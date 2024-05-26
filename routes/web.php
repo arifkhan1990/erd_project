@@ -32,7 +32,8 @@ Route::get('message', [FrontPageController::class, 'message'])->name('front.mess
 Route::get('message2', [FrontPageController::class, 'message2'])->name('front.message2');
 Route::get('faq', [FrontPageController::class, 'faq'])->name('front.faq');
 
-Auth::routes();
+Auth::routes(['verify' => true]);
+
 Route::get('/logout', function () {
     auth()->logout();
     return redirect("/");
@@ -42,18 +43,20 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 // user
-Route::get('/dashboard', [UserAdminController::class, 'dashboard'])->name('user.dashboard');
-Route::get('user-about', [UserAdminController::class, 'about'])->name('user.about');
-Route::get('user-profile/{id}', [UserAdminController::class, 'profile'])->name('user.profile');
-Route::put('user-profile-update/{id}', [UserAdminController::class, 'update'])->name('user.update');
-Route::put('user-profile/password-change/{id}', [UserAdminController::class, 'changePassword'])->name('user.profile.password_change');
-// Route::get('user-application', [ApplicationController::class, 'index'])->name('user.application');
+Route::middleware(['user', 'auth', 'verified'])->group(function () {
+    Route::get('/dashboard', [UserAdminController::class, 'dashboard'])->name('user.dashboard');
+    Route::get('user-about', [UserAdminController::class, 'about'])->name('user.about');
+    Route::get('user-profile/{id}', [UserAdminController::class, 'profile'])->name('user.profile');
+    Route::put('user-profile-update/{id}', [UserAdminController::class, 'update'])->name('user.update');
+    Route::put('user-profile/password-change/{id}', [UserAdminController::class, 'changePassword'])->name('user.profile.password_change');
+    // Route::get('user-application', [ApplicationController::class, 'index'])->name('user.application');
 
 
 
-Route::get('user-application', [ApplicationController::class, 'create'])->name('user.application');
-Route::post('form/store', [ApplicationController::class, 'store'])->name('form.store');
-Route::get('form', [ApplicationController::class, 'index'])->name('form.index');
-Route::get('form/{id}/edit', [ApplicationController::class, 'edit'])->name('form.edit');
-Route::put('form/{id}', [ApplicationController::class, 'update'])->name('form.update');
-Route::delete('form/{id}', [ApplicationController::class, 'destroy'])->name('form.destroy');
+    Route::get('user-application', [ApplicationController::class, 'create'])->name('user.application');
+    Route::post('form/store', [ApplicationController::class, 'store'])->name('form.store');
+    Route::get('form', [ApplicationController::class, 'index'])->name('form.index');
+    Route::get('form/{id}/edit', [ApplicationController::class, 'edit'])->name('form.edit');
+    Route::put('form/{id}', [ApplicationController::class, 'update'])->name('form.update');
+    Route::delete('form/{id}', [ApplicationController::class, 'destroy'])->name('form.destroy');
+});

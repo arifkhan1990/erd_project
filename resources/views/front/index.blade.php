@@ -125,12 +125,12 @@
 
                     <div class="register_and_return_to_dashboard_button">
                         @if (auth()->user() == null)
-                            <a class="btn btn-success starting-content-left-button" id="register" href="#">
+                            <a class="btn btn-success starting-content-left-button" id="register" href="{{route('register')}}">
                                 Register
                             </a>
                         @else
                             <a class="btn btn-success starting-content-left-button" id="register"
-                                href="{{ route('home') }}">
+                                href="{{ route('user.dashboard') }}">
                                 Return to dashboard
                             </a>
                         @endif

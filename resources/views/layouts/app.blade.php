@@ -31,6 +31,7 @@
     style="background-image: url({{ asset('assets/images/ssskrrr.png') }});background-repeat: no-repeat; height: 100%; background-size: cover;">
     <div class="loader"></div>
     <div id="app">
+
         <div class="content" style="background: transparent;">
             <nav class="navbar" style="position: relative !important; left: 0px;">
                 <a class="navbar-brand" href="/"

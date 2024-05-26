@@ -16,7 +16,9 @@ class ApplicationController extends Controller
     // Display form to create new entries
     public function create()
     {
-        return view('user.application.application');
+        $countries = CountryInfo::orderBy('country_name_en','asc')->get();
+        $bankInfo = Bank::orderBy('bank_name_en','asc')->get();
+        return view('user.application.application', ['countries' => $countries, 'bankInfo' => $bankInfo]);
     }
 
     // Store new form entries
@@ -41,6 +43,10 @@ class ApplicationController extends Controller
             $travel = new Travel();
             $this->saveTravelForm($request, $travel);
 
+            // Applicaion submit
+            $applicationRequest = new Application();
+            $this->saveApplicationRequest($request, $applicationRequest);
+
             DB::commit();
             return redirect()->route('user.dashboard')->with('success', 'Application submitted successfully!');
         } catch (\Exception $e) {
@@ -57,8 +63,9 @@ class ApplicationController extends Controller
         $educationals = Educational::all();
         $bankings = Banking::all();
         $travels = Travel::all();
+        $application = Application::all();
 
-        return view('user.application.application', compact('personalForms', 'educationals', 'bankings', 'travels'));
+        return view('user.application.application', compact('personalForms', 'educationals', 'bankings', 'travels', 'application'));
     }
 
     // Display form to edit an entry
@@ -93,6 +100,10 @@ class ApplicationController extends Controller
             $travel = Travel::where('user_id', $personalForm->user_id)->first();
             $this->saveTravelForm($request, $travel);
 
+            // Applicaion submit
+            $applicationRequest = new Application();
+            $this->saveApplicationRequest($request, $applicationRequest);
+
             DB::commit();
             return redirect()->route('form.index')->with('success', 'Form updated successfully!');
         } catch (\Exception $e) {
@@ -122,6 +133,11 @@ class ApplicationController extends Controller
             $travel = Travel::where('user_id', $personalForm->user_id)->first();
             if ($travel) {
                 $travel->delete();
+            }
+
+            $applicarion = Applicarion::where('user_id', $personalForm->user_id)->first();
+            if ($applicarion) {
+                $applicarion->delete();
             }
 
             DB::commit();
@@ -187,5 +203,20 @@ class ApplicationController extends Controller
         $travel->fill($request->all());
         $travel->user_id = $request->user_id;
         $travel->save();
+    }
+
+    private function saveApplicationRequest(Request $request, $applicationRequest)
+    {
+        $year = date('Y'); // Get the current year
+        $time = date('His'); // Get the current time in hours, minutes, and seconds (HHMMSS)
+        $milliseconds = round(microtime(true) * 1000) % 1000; // Get the current milliseconds
+
+        $uniqueIdentifier = "BSTF-$year-$time$milliseconds";
+
+        $applicationRequest->fill($request->all());
+        $applicationRequest->user_id = $request->user_id;
+        $applicationRequest->username = auth()->user()->name;
+        $applicationRequest->applicant_unique_id = $uniqueIdentifier;
+        $applicationRequest->save();
     }
 }

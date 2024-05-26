@@ -13,7 +13,7 @@
                             @csrf
                             <div class="row">
                                 <div class="form-group col-6">
-                                    <label for="name">Name</label>
+                                    <label for="name" style="color: #282424 !important;">Name</label>
                                     <input id="name" type="text" class="form-control @error('name') is-invalid @enderror"  name="name"
                                         value="{{ old('name') }}" required autocomplete="name" 
                                         autofocus>
@@ -24,7 +24,7 @@
                                     @enderror
                                 </div>
                                 <div class="form-group col-6">
-                                    <label for="email">Email</label>
+                                    <label for="email" style="color: #282424 !important;">Email</label>
                                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email"
                                         value="{{ old('email') }}" name="email" required autocomplete="email">
 
@@ -38,7 +38,7 @@
 
                             <div class="row">
                                 <div class="form-group col-6">
-                                    <label for="password" class="d-block">Password</label>
+                                    <label for="password" class="d-block" style="color: #282424 !important;">Password</label>
                                     <input id="password" type="password" class="form-control pwstrength @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" data-indicator="pwindicator">
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
@@ -51,7 +51,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group col-6">
-                                    <label for="password2" class="d-block">{{ __('Confirm Password') }}</label>
+                                    <label for="password2" class="d-block" style="color: #282424 !important;">{{ __('Confirm Password') }}</label>
                                     <input id="password-confirm" type="password" class="form-control"
                                         name="password_confirmation" required autocomplete="new-password">
                                 </div>

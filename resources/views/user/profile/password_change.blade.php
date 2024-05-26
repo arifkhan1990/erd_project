@@ -3,7 +3,7 @@
     @method('PUT')
     <div class="card-body">
         <div class="form-group row">
-            <label for="current_password" class="col-sm-3 col-form-label">Current Password</label>
+            <label for="current_password" class="col-sm-3 col-form-label" style="color: #282424 !important;">Current Password</label>
             <div class="col-sm-9">
                 <input type="password" class="form-control" id="current_password" placeholder="Current Password" name="current_password" required>
                 <div class="invalid-feedback">
@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="form-group row">
-            <label for="password" class="col-sm-3 col-form-label">Password</label>
+            <label for="password" class="col-sm-3 col-form-label" style="color: #282424 !important;">Password</label>
             <div class="col-sm-9">
                 <input type="password" class="form-control" id="password" placeholder="Password" name="password" required>
                 <div class="invalid-feedback">
@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="form-group row">
-            <label for="password_confirmation" class="col-sm-3 col-form-label">Confirm Password</label>
+            <label for="password_confirmation" class="col-sm-3 col-form-label" style="color: #282424 !important;">Confirm Password</label>
             <div class="col-sm-9">
                 <input type="password" class="form-control" id="password_confirmation" placeholder="Confirm Password" name="password_confirmation" required>
                 <div class="invalid-feedback" id="confirmPasswordError">

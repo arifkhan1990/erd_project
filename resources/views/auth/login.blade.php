@@ -46,7 +46,7 @@
                         <form method="POST" action="{{ route('login') }}" class="needs-validation" novalidate="">
                             @csrf
                             <div class="form-group">
-                                <label for="email">Email</label>
+                                <label for="email" style="color: #282424 !important;">Email</label>
                                 <input type="email" placeholder="" id="email" type="email"
                                     class="form-control @error('email') is-invalid @enderror input-email" name="email"
                                     value="{{ old('email') }}" required autocomplete="email" autofocus />
@@ -62,7 +62,7 @@
 
                             <div class="form-group">
                                 <div class="d-block">
-                                    <label for="password" class="control-label">Password</label>
+                                    <label for="password" class="control-label" style="color: #282424 !important;">Password</label>
                                     @if (Route::has('password.request'))
                                         <div class="float-right">
                                             <a class="text-small" href="{{ route('password.request') }}">
@@ -88,7 +88,7 @@
                                 <div class="custom-control custom-checkbox">
                                     <input class="custom-control-input" type="checkbox" name="remember" id="remember"
                                         {{ old('remember') ? 'checked' : '' }} />
-                                    <label class="custom-control-label" for="remember">Remember Me</label>
+                                    <label class="custom-control-label" for="remember" style="color: #282424 !important;">Remember Me</label>
                                 </div>
                             </div>
 
