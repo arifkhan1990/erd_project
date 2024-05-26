@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class CountryInfo extends Model
 {
     use HasFactory;
-    protected $table = 'country_info';
+    protected $table = 'countries';
 }

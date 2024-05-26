@@ -90,11 +90,11 @@
                     </div>
                     <ul class="sidebar-menu">
                         <li class="menu-header">Main</li>
-                        <li class="dropdown active">
+                        <li class="dropdown {{ request()->routeIs('user.dashboard') ? 'active' : '' }}">
                             <a href="{{ route('user.dashboard') }}" class="nav-link"><i
                                     data-feather="monitor"></i><span>Dashboard</span></a>
                         </li>
-                        <li class="dropdown">
+                        <li class="dropdown {{ request()->routeIs('user.profile') ? 'active' : '' }}">
                             <a href="{{ route('user.profile', ['id' => Auth::user()->id]) }}" class="nav-link"><i
                                     data-feather="user"></i><span>Profile</span></a>
                         </li>

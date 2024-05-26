@@ -13,9 +13,6 @@
                                 right
                                 now.
                             </h5>
-                            @php
-                                // dd(auth()->user())
-                            @endphp
                             <div class="buttons pt-2">
                                 @if ($user->personal && $user->personal->count() > 0)
                                 <a href="{{ route('user.profile', ['id' => $user->id]) }}" class="btn btn-lg rounded-full btn-success"
@@ -43,7 +40,7 @@
                                     <div class="card-content">
                                         <h5 class="font-15">Application Status</h5>
                                         @if(auth()->user()->application()->count() > 0)
-                                            <br>
+                                            
                                             <div class="">
                                                 <button
                                                     class="m-auto d-block btn @if(auth()->user()->application->status == 'pending') btn-warning @elseif(auth()->user()->application->status == 'accepted') btn-success @elseif(auth()->user()->application->status == 'rejected') btn-danger @endif status">{{ \Illuminate\Support\Str::ucfirst(auth()->user()->application->status) }}
@@ -78,7 +75,7 @@
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                                     <div class="card-content">
                                         <h5 class="font-15">Application Deadline</h5>
-                                        <h2 class="mb-3 font-18 col-orange">32 Days</h2>
+                                        <p class="mb-3 font-18 col-orange"><span>{{ $time_difference }}</span> Days left</p>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">

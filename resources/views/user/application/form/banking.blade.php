@@ -18,14 +18,19 @@
     <div class="form-group form-float col-6">
         <div class="form-line">
             <label class="form-label">Applicant's NID number</label>
-            <input type="text" class="form-control" id="nid" name="nid" placeholder="Enter NID" required>
+            <input type="number" class="form-control" id="nid" name="nid" placeholder="Enter NID" required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                maxlength="17" minlength="10" min="0" class="@error('mothers_nid') is-invalid @enderror">
         </div>
     </div>
     <div class="form-group form-float col-6">
         <div class="form-line">
             <label class="form-label">Name of Bank in which stipend will be credited</label>
-            <input type="text" class="form-control" id="name_of_bank" name="name_of_bank"
-                placeholder="Enter Name of Bank" required>
+            <select class="form-control" id="name_of_bank" name="name_of_bank" required>
+                <option value="" disabled selected>Select your bank</option>
+                @foreach ($bankInfo as $bank)
+                    <option value="{{ $bank['bank_name_en'] }}">{{ $bank['bank_name_en'] }}</option>
+                @endforeach
+            </select>
         </div>
     </div>
 </div>

@@ -79,7 +79,7 @@
     <div class="form-group form-float col-6">
         <div class="form-line">
             <label class="form-label">HSC Passing Year<span style="color: red;">**</span></label>
-            <input type="date" class="form-control datepicker" id="hsc_passing_year"
+            <input type="date" class="form-control" id="hsc_passing_year"
                 placeholder="Enter HSC Passing Year" name="hsc_passing_year" required />
         </div>
     </div>
@@ -118,7 +118,7 @@
             <select class="form-control" id="study_country" name="study_country" required>
                 <option value="" disabled selected>Select a country</option>
                 @foreach ($countries as $country)
-                    <option value="{{ $country['country_name_en] }}">{{ $country['country_name_en'] }}</option>
+                    <option value="{{ $country['country_name_en'] }}">{{ $country['country_name_en'] }}</option>
                 @endforeach
             </select>
         </div>

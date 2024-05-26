@@ -7,6 +7,9 @@ use App\Models\PersonalForm;
 use App\Models\Educational;
 use App\Models\Banking;
 use App\Models\Travel;
+use App\Models\BankInfo;
+use App\Models\CountryInfo;
+use App\Models\Application;
 use Illuminate\Http\Request;
 use DB;
 use Auth;
@@ -17,13 +20,14 @@ class ApplicationController extends Controller
     public function create()
     {
         $countries = CountryInfo::orderBy('country_name_en','asc')->get();
-        $bankInfo = Bank::orderBy('bank_name_en','asc')->get();
+        $bankInfo = BankInfo::orderBy('bank_name_en','asc')->get();
         return view('user.application.application', ['countries' => $countries, 'bankInfo' => $bankInfo]);
     }
 
     // Store new form entries
     public function store(Request $request)
     {
+
         
         DB::beginTransaction();
         try {
